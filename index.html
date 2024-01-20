@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="sidebar_nahar_and_kabir_it">
+        <div class="text_nahar_and_kabir_it">
+            Side Menu
+        </div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a class="feature_nahar_and_kabir_it" href="#">Features
+                <span class="fas fa-caret-down nahar_and_kabir_it_first"></span>
+            </a>
+                <ul class="feature_show_nahar_and_kabir_it">
+                    <li><a href="#">pages</a></li>
+                    <li><a href="#">Elements</a></li>
+                </ul>
+            </li>
+            <li><a class="service_nahar_and_kabir_it" href="#">Services
+                <span class="fas fa-caret-down nahar_and_kabir_it_second"></span>
+            </a>
+                <ul class="service_show_nahar_and_kabir_it">
+                    <li><a href="#">App Design</a></li>
+                    <li><a href="#">Web Design</a></li>
+                </ul>
+            </li>
+
+        </ul>
+
+    </nav>
+    <script>
+        $('.feature_nahar_and_kabir_it').click(function(){
+            $('nav ul .feature_show_nahar_and_kabir_it').toggleClass("show");
+            $('nav ul .nahar_and_kabir_it_first').toggleClass("rotate");
+        });
+        $('.service_nahar_and_kabir_it').click(function(){
+            $('nav ul .service_show_nahar_and_kabir_it').toggleClass("show1");
+            $('nav ul .nahar_and_kabir_it_second').toggleClass("rotate");
+        });
+
+        $('nav ul li').click(function(){
+            $(this).addClass("active").siblings().remove("active");
+        });
+    </script>
+
+</body>
+
+</html>
